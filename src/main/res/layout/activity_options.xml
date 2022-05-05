@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionsActivity">
+
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="272dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="212dp"
+        android:gravity="center"
+        android:text="How many seconds do you want to play ?"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:onClick="nextButton"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/timeSelect"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/timeSelect"
+        app:layout_constraintTop_toBottomOf="@+id/timeSelect"
+        app:layout_constraintVertical_bias="0.925" />
+
+    <EditText
+        android:id="@+id/timeSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/questionText"
+        app:layout_constraintStart_toStartOf="@+id/questionText"
+        app:layout_constraintTop_toBottomOf="@+id/questionText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:id="@+id/easyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="750" />
+
+            <RadioButton
+                android:id="@+id/mediumButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="500" />
+
+            <RadioButton
+                android:id="@+id/hardButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="300" />
+        </RadioGroup>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
